@@ -1,0 +1,7 @@
+name: Jobs
+main: de.petropia.spacelifeJobs.Jobs
+version: 1.0.0
+author: Professor_Sam
+depend:
+  - "TurtleServer"
+  - "SpacelifeCore"

@@ -1,0 +1,55 @@
+LvlBaseValue: 1.1179970295
+Jobs:
+  Meeresbiologe:
+    Faktor: 1
+    Fish:
+      - "COD;0.5"
+      - "SALMON;0.6"
+      - "TROPICAL_FISH;7"
+      - "PUFFERFISH;7"
+      - "BOW;8"
+      - "BOOK;8"
+      - "SADDLE;8"
+      - "NAME_TAG;8"
+    Kill:
+      - "SQUID;0.9"
+      - "COD;0.2"
+      - "SALMON;0.3"
+      - "TROPICAL_FISH;0.5"
+      - "PUFFERFISH;0.6"
+      - "DOLPHIN;1"
+      - "AXOLOTL;1"
+      - "ELDER_GUARDIAN;130"
+      - "DROWNED;0.1"
+      - "TURTLE;5"
+      - "GUARDIAN;1.6"
+    Break:
+      - "BRAIN_CORAL_BLOCK;0.5"
+      - "BRAIN_CORAL_FAN;0.5"
+      - "BUBBLE_CORAL_BLOCK;0.5"
+      - "BUBBLE_CORAL_FAN;0.5"
+      - "FIRE_CORAL_BLOCK;0.5"
+      - "FIRE_CORAL_FAN;0.5"
+      - "HORN_CORAL_BLOCK;0.5"
+      - "HORN_CORAL_FAN;0.5"
+      - "TUBE_CORAL_BLOCK;0.5"
+      - "TUBE_CORAL_FAN;0.5"
+      - "DARK_PRISMARINE;0.2"
+      - "PRISMARINE;0.2"
+      - "PRISMARINE_BRICKS;0.2"
+      - "SEAGRASS;0.1"
+      - "BLUE_ICE;0.12"
+      - "PACKED_ICE;0.12"
+      - "ICE;0.12"
+    CatchFishInBucket: 0.1
+
+  Krieger:
+    Faktor: 1.2
+  Caveforscher:
+    Faktor: 0.9
+  Forster:
+    Faktor: 0.5
+  Landwirt:
+    Faktor: 0.4
+  Industrie:
+    Faktor: 5
