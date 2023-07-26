@@ -45,11 +45,140 @@ Jobs:
 
   Krieger:
     Faktor: 1.2
+    Kill:
+      - "ENDER_DRAGON;150"
+      - "SPIDER;3"
+      - "CAVE_SPIDER;1.5"
+      - "ZOMBIE;3"
+      - "ZOMBIE_VILLAGER;5"
+      - "HUSK;6"
+      - "SKELETON;3.5"
+      - "STRAY;8"
+      - "SKELETON_HORSE;15"
+      - "CREEPER;3.5"
+      - "ENDERMAN;7.5"
+      - "WITCH;6.5"
+      - "SLIME;1"
+      - "PHANTOM;7"
+      - "SILVERFISH;1.5"
+      - "ENDERMITE;20"
+      - "PILLAGER;1.1"
+      - "VILLAGER;8"
+      - "RAVAGER;8"
+      - "VINDICATOR;3"
+      - "EVOKER;5"
+      - "VEX;1"
+      - "SHULKER;4"
+
   Caveforscher:
     Faktor: 0.9
+    Break:
+      - "DIRT;0.05"
+      - "COARSE_DIRT;0.07"
+      - "GRASS_BLOCK;0.06"
+      - "MYCELIUM;0.08"
+      - "PODZOL;0.06"
+      - "DIRT_PATH;0.06"
+      - "SAND;0.06"
+      - "RED_SAND;0.08"
+      - "GRAVEL;0.06"
+      - "CLAY;0.25"
+      - "STONE;0.03"
+      - "ANDESITE;0.05"
+      - "DIORITE;0.05"
+      - "GRANITE;0.05"
+      - "MOSSY_COBBLESTONE;0.05"
+      - "COAL_ORE;0.5"
+      - "IRON_ORE;0.3"
+      - "GOLD_ORE;2.5;"
+      - "LAPIS_ORE;2"
+      - "REDSTONE_ORE;2"
+      - "EMERALD_ORE;15"
+      - "DIAMOND_ORE;25"
+      - "SPAWNER;25"
+      - "DEEPSLATE;0.05"
+      - "CALCITE;0.07"
+      - "TUFF;0.06"
+      - "POINTED_DRIPSTONE;0.05"
+      - "DRIPSTONE_BLOCK;0.05"
+      - "AMETHYST_BLOCK;0.2"
+      - "END_STONE;0.09"
+      - "ROOTED_DIRT;0.5"
+      - "SPORE_BLOSSOM;0.5"
+      - "BIG_DRIPLEAF;0.1"
+      - "BIG_DRIPLEAF_STEM;0.1"
+      - "SMALL_DRIPLEAF;0.1"
+      - "PURPUR_BLOCK;0.09"
+
+  Nether:
+    Faktor: 1
+    Break:
+      - "SOUL_SAND;0.08"
+      - "SOUL_SOIL;0.08"
+      - "NETHERRACK;0.02"
+      - "WARPED_NYLIUM;0.02"
+      - "WARPED_NYLIUM;0.02"
+      - "CRIMSON_NYLIUM;0.02"
+      - "NETHER_GOLD_ORE;0.5"
+      - "NETHER_QUARTZ_ORE;0.5"
+      - "GLOWSTONE;1"
+      - "SHROOMLIGHT;0.5"
+      - "BONE_BLOCK;1"
+      - "BASALT;0.1"
+      - "MAGMA_BLOCK;0.1"
+      - "NETHER_WART;0.2"
+      - "WARPED_FUNGUS;0.2"
+      - "CRIMSON_FUNGUS;0.2"
+      - "BLACKSTONE;0.05"
+      - "CRIMSON_STEM;0.4"
+      - "WARPED_STEM;0.4"
+    Kill:
+      - "PIGLIN;4.7"
+      - "HOGLIN;7"
+      - "PIGLIN_BRUTE;60"
+      - "ZOMBIFIED_PIGLIN;3"
+      - "MAGMA_CUBE;0.5"
+      - "GHAST;8"
+      - "STRIDER;0.2"
+      - "BLAZE;1"
+      - "WITHER_SKELETON;3.5"
+      - "WITHER;200"
+
   Forster:
     Faktor: 0.5
+    Break:
+      - "OAK_LOG;0.5"
+      - "BIRCH_LOG;0.5"
+      - "JUNGLE_LOG;0.55"
+      - "SPRUCE_LOG;0.5"
+      - "DARK_OAK_LOG;0.5"
+      - "ACACIA_LOG;0.55"
+      - "BAMBOO;0.3"
+      - "RED_MUSHROOM;0.2"
+      - "RED_MUSHROOM_BLOCK;0.2"
+      - "BROWN_MUSHROOM_BLOCK;0.2"
+      - "BROWN_MUSHROOM;0.2"
+      - "HAY_BLOCK;0.8"
+    Kill:
+      - "FOX;0.2"
+      - "BEE;0.2"
+      - "PANDA;0.3"
+
   Landwirt:
     Faktor: 0.4
-  Industrie:
-    Faktor: 5
+    Breed: 0.5
+    Kill:
+      - "RABBIT;0.3"
+      - "SHEEP;0.3"
+      - "CHICKEN;0.3"
+      - "MUSHROOM_COW;0.9"
+      - "COW;0.9"
+      - "PIG;0.3"
+      - "HORSE;0.2"
+      - "DONKEY;0.2"
+      - "MULE;0,2"
+      - "BEE;0.2"
+      - "GOAT;0.3"
+      - "LLAMA;0.2"
+    Shear: 0.5
+    Milk: 0.01
