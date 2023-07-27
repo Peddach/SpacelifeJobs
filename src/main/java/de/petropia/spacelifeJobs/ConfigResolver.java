@@ -15,6 +15,10 @@ public class ConfigResolver {
         return Jobs.getInstance().getConfig().getDouble("Jobs."+job.getConfigID()+".Faktor");
     }
 
+    public static double getMaxMoneyBuff(){
+        return Jobs.getInstance().getConfig().getDouble("MaxMoneyBuff");
+    }
+
     public static <E extends Enum<E>> List<EnumValueEntry<E>> getEnumValueEntries(Job job, Class<E> enumClass, String configEnd) {
         List<String> stringList = Jobs.getInstance().getConfig().getStringList("Jobs." + job.getConfigID() + "." + configEnd);
         List<EnumValueEntry<E>> valueEntries = new ArrayList<>();

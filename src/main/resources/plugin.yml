@@ -6,3 +6,10 @@ api-version: 1.19
 depend:
   - "TurtleServer"
   - "SpacelifeCore"
+commands:
+  jobs:
+    aliases: berufe
+    description: "Öffnet Job gui"
+permissions:
+  spacelife.jobs.command.job.clear:
+    default: false

@@ -20,4 +20,17 @@ public class JobMath {
         int nextLevel = currentLevel + 1;
         return (Math.pow(baseValue, nextLevel) + nextLevel * nextLevel) * jobMultiplier;
     }
+
+    public static double calculateAddedBuff(double revenue){
+        double maxBuffMoney = ConfigResolver.getMaxMoneyBuff();
+        double buff = (revenue / maxBuffMoney);
+        if(buff >= 1){
+            return 1;
+        }
+        return buff;
+    }
+
+    public static double removeBuffFromRevenue(double buff, double revenue){
+        return revenue * (1-buff);
+    }
 }

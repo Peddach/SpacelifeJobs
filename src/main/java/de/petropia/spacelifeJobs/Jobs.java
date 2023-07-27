@@ -1,5 +1,6 @@
 package de.petropia.spacelifeJobs;
 
+import de.petropia.spacelifeJobs.command.JobCommand;
 import de.petropia.spacelifeJobs.job.*;
 import de.petropia.turtleServer.api.PetropiaPlugin;
 public class Jobs extends PetropiaPlugin {
@@ -20,6 +21,8 @@ public class Jobs extends PetropiaPlugin {
         new NetherJob();
         new SeaJob();
         new WoodJob();
+        getCommand("jobs").setExecutor(new JobCommand());
+        getCommand("jobs").setTabCompleter(new JobCommand());
     }
 
 

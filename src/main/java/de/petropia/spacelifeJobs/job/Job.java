@@ -24,6 +24,23 @@ public abstract class Job {
             return jobStats;
         });
         amount = JobMath.computeRevenue(stats.getLevel(), amount);
+        double addedBuff = JobMath.calculateAddedBuff(amount);
+        double allBuff = stats.getBuff() + addedBuff;
+        if(allBuff >= 1){
+            allBuff = 1;
+        }
+        stats.setBuff(allBuff);
+        amount = JobMath.removeBuffFromRevenue(allBuff, amount);
+        for(JobStats otherStats : spacelifePlayer.getJobStats().values()){
+            if(otherStats.equals(stats)){
+                continue;
+            }
+            double otherStatsBuff = otherStats.getBuff() - addedBuff;
+            if(otherStatsBuff < 0){
+                otherStatsBuff = 0;
+            }
+            otherStats.setBuff(otherStatsBuff);
+        }
         stats.addMoney(amount);
         double moneyToNextLevel = JobMath.getRequiredAmountForNextLevel(stats.getLevel(), this);
         if(JobMath.isLevelUp(stats.getAllTimeMoney(), moneyToNextLevel)){
@@ -43,6 +60,9 @@ public abstract class Job {
         player.sendActionBar(Component.text(getName() + ": ", NamedTextColor.GRAY)
                 .append(Component.text("+", TextColor.fromCSSHexString("#6b9466")).decorate(TextDecoration.BOLD))
                 .append(Component.text(formatter.format(amount) + "$", NamedTextColor.GOLD))
+                .append(Component.text(" (", NamedTextColor.GRAY))
+                .append(Component.text("-" + formatter.format(allBuff*100) + "%", TextColor.fromCSSHexString("#a14848")).decorate(TextDecoration.ITALIC))
+                .append(Component.text(")",NamedTextColor.GRAY))
                 .append(Component.text(" - ", NamedTextColor.DARK_GRAY))
                 .append(Component.text(formatter.format(stats.getAllTimeMoney()) + "$/" + formatter.format(moneyToNextLevel) + "$", NamedTextColor.GRAY)));
     }
