@@ -41,7 +41,6 @@ Jobs:
       - "BLUE_ICE;0.12"
       - "PACKED_ICE;0.12"
       - "ICE;0.12"
-    CatchFishInBucket: 0.1
 
   Krieger:
     Faktor: 1.2
@@ -176,7 +175,7 @@ Jobs:
       - "PIG;0.3"
       - "HORSE;0.2"
       - "DONKEY;0.2"
-      - "MULE;0,2"
+      - "MULE;0.2"
       - "BEE;0.2"
       - "GOAT;0.3"
       - "LLAMA;0.2"
