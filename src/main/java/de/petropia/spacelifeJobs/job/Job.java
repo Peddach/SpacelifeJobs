@@ -6,6 +6,7 @@ import de.petropia.spacelifeCore.player.SpacelifePlayer;
 import net.kyori.adventure.sound.Sound;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.title.Title;
 import org.bukkit.entity.Player;
@@ -40,6 +41,7 @@ public abstract class Job {
         }
         DecimalFormat formatter = new DecimalFormat("0.00");
         player.sendActionBar(Component.text(getName() + ": ", NamedTextColor.GRAY)
+                .append(Component.text("+", TextColor.fromCSSHexString("#6b9466")).decorate(TextDecoration.BOLD))
                 .append(Component.text(formatter.format(amount) + "$", NamedTextColor.GOLD))
                 .append(Component.text(" - ", NamedTextColor.DARK_GRAY))
                 .append(Component.text(formatter.format(stats.getAllTimeMoney()) + "$/" + formatter.format(moneyToNextLevel) + "$", NamedTextColor.GRAY)));
