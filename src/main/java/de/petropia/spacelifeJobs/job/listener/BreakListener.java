@@ -1,5 +1,6 @@
 package de.petropia.spacelifeJobs.job.listener;
 
+import de.petropia.spacelifeCore.blockdata.PlayerPlacedBlockManager;
 import de.petropia.spacelifeJobs.ConfigResolver;
 import de.petropia.spacelifeJobs.Jobs;
 import de.petropia.spacelifeJobs.job.Job;
@@ -24,10 +25,13 @@ public class BreakListener implements Listener {
         Bukkit.getServer().getPluginManager().registerEvents(this, Jobs.getInstance());
     }
 
-    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.HIGHEST)
     public void onBlockBreakEvent(BlockBreakEvent event){
         Double amount = revenue_map.get(event.getBlock().getType());
         if(amount == null){
+            return;
+        }
+        if(PlayerPlacedBlockManager.isBlockPlacedByPlayer(event.getBlock())){
             return;
         }
         job.reportMoneyBack(event.getPlayer(), amount);
